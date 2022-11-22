@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cozmaciuc_Mihai_Laborator2.Migrations
 {
     [DbContext(typeof(Cozmaciuc_Mihai_Laborator2Context))]
-    [Migration("20221122195011_Authors")]
-    partial class Authors
+    [Migration("20221122213954_test3")]
+    partial class test3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,11 +32,7 @@ namespace Cozmaciuc_Mihai_Laborator2.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<string>("AuthorFirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AuthorLastName")
+                    b.Property<string>("AuthorName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -20,14 +20,15 @@
                 <span asp-validation-for="Book.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.Author" class="control-label"></label>
-                <input asp-for="Book.Author" class="form-control" />
-                <span asp-validation-for="Book.Author" class="text-danger"></span>
-            </div>@*//sterg?*@
-            <div class="form-group">
                 <label asp-for="Book.Price" class="control-label"></label>
                 <input asp-for="Book.Price" class="form-control" />
                 <span asp-validation-for="Book.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.PublishingDate" class="control-label">PublishingDate</label>
+                <select asp-for="Book.PublishingDate" class="form-control" asp-items="ViewBag.PublishingDate">
+                </select>
+                <span asp-validation-for="Book.PublishingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Book.PublisherID" class="control-label">Publisher Name</label>
