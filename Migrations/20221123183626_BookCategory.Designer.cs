@@ -4,6 +4,7 @@ using Cozmaciuc_Mihai_Laborator2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cozmaciuc_Mihai_Laborator2.Migrations
 {
     [DbContext(typeof(Cozmaciuc_Mihai_Laborator2Context))]
-    partial class Cozmaciuc_Mihai_Laborator2ContextModelSnapshot : ModelSnapshot
+    [Migration("20221123183626_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
