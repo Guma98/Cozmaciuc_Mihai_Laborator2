@@ -14,7 +14,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Author[0].AuthorName)
+                @Html.DisplayNameFor(model => model.Author[0].AuthorFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author[0].AuthorLastName)
             </th>
             <th></th>
         </tr>
@@ -22,10 +25,12 @@
     <tbody>
 @foreach (var item in Model.Author) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AuthorName)
-            </td>
-
+                 <td>
+                    @Html.DisplayFor(modelItem => item.AuthorFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AuthorLastName)
+                </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

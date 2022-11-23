@@ -5,8 +5,7 @@ namespace Cozmaciuc_Mihai_Laborator2.Models
     public class BookCategoriesPageModel : PageModel
     {
         public List<AssignedCategoryData> AssignedCategoryDataList;
-        public void PopulateAssignedCategoryData(Cozmaciuc_Mihai_Laborator2Context context,
-        Book book)
+        public void PopulateAssignedCategoryData(Cozmaciuc_Mihai_Laborator2Context context, Book book)
         {
             var allCategories = context.Category;
             var bookCategories = new HashSet<int>(
